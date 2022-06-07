@@ -1,0 +1,25 @@
+.allCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.allCards .card_1 {
+  display: inline;
+}
+.allCards .card_2 {
+  display: inline;
+}
+.allCards .card_3 {
+  display: inline;
+}
+.allCards .back_1 {
+  display: none;
+}
+.allCards .back_2 {
+  display: none;
+}
+.allCards .back_3 {
+  display: none;
+}
+
+/*# sourceMappingURL=styles.css.map */

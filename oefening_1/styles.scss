@@ -1,0 +1,11 @@
+.allCards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .card_1{display:inline};
+  .card_2{display:inline};
+  .card_3{display:inline};
+  .back_1{display: none};
+  .back_2{display: none};
+  .back_3{display: none;}
+}
