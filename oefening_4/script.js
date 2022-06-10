@@ -36,7 +36,7 @@ function checkwinner(team1, avg1, team2, avg2) {
         console.log(`team ${team2} is the winner (${avg2} vs ${avg1})`)
         winner = team2
     } else if (avg1 === avg2) {
-        winner = "there is no winner, it's draws"
+        winner = "there is no winner, it's draws" //5
     }
     else if ((avg1 > avg2 && avg1<avg2*2) ||(avg2 > avg1 && avg2<avg1*2)){
         winner= "no one. The total score is to low"
@@ -58,4 +58,4 @@ console.log(`average Koalas: ${avgKoalas}, average Dolphins: ${avgDolphins}, the
 console.log(`average Koalas: ${avgKoalas2}, average Dolphins: ${avgDolphins2}, the winner of game 2 is ${winner2}`);
 
 
-//5
+
