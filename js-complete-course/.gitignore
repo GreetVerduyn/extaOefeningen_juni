@@ -1,2 +1,11 @@
-.idea
+# PhpStorm
+*.iml
+.idea/
+
+# Dependency directory
 node_modules
+
+### Node ###
+# Logs
+logs
+*.log
