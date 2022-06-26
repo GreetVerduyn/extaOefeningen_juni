@@ -1,3 +1,24 @@
-body{
-  background-color: purple;
+.top {
+  background-color: darkcyan;
+  width: 1000px;
+  height: 100px;
 }
+
+#mainPokemon {
+  position: absolute;
+  left: 50px;
+  top: 180px;
+}
+
+.pokemon {
+  width: 150px;
+  height: 250px;
+  font-size: 25px;
+
+  .image {
+    background-color: sandybrown;
+    border-radius: 50px;
+    height: 150px;
+  }
+}
+
