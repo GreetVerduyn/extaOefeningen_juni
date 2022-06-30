@@ -5,8 +5,9 @@
 
 let reference= 'https://pokeapi.co/api/v2/pokemon/';
 let referenceMoves='';
-//let moves=[];
+let moves=[];
 const searchField = document.getElementById('search');
+
 
 
 async function getData(url){
@@ -16,16 +17,18 @@ async function getData(url){
 //console.log(data)
 }
 
-function getMoves(moves){
-    if (moves.length >=3) {
+function getMoves(allMoves){
+    if (allMoves.length >=3) {
         for (let i = 0; i <= 3; i++) {
-            console.log(moves[i].move.name)
+
+            moves.push(allMoves[i].move.name);
         }
     } else {
-        for (let i = 0; i < moves.length; i++) {
-            console.log(moves[i].move.name)
+        for (let i = 0; i < allMoves.length; i++) {
+         moves.push(allMoves[i].move.name)
         }
     }
+    console.log(moves)
 }
 
 
@@ -38,20 +41,23 @@ function searchPokemon() {
         let namePokemon = response.name;
         let idPokemon = response.id;
         let imgPokemon = response.sprites.front_default;
-        let moves = response.moves//.slice(0,3);
+        let allMoves = response.moves;
         // console.log(namePokemon);
         // console.log(idPokemon);
         // console.log("img", imgPokemon);
-       getMoves(moves)
-      //  console.log(response);
+        getMoves(allMoves);
         document.getElementById("namePokemon").innerHTML = namePokemon;
         document.getElementById("idPokemon").innerHTML = ` id ${idPokemon}`;
         document.getElementById("imagePokemon").src = imgPokemon;
-        //document.getElementById("movesPokemon").innertml = moves;
-console.log(moves)
+        document.getElementById("movesPokemon").innerHTML = moves;
+
+
     })
-//console.log(moves)
+
 }
+
+
+
 // function getMoves(moves){
 //     if (moves.length >=3) {
 //         for (let i = 0; i <= 3; i++) {
