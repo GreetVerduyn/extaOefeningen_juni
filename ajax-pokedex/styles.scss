@@ -2,7 +2,7 @@
   background-color: darkcyan;
   width: 1000px;
   height: 100px;
-}
+  }
 
 #mainPokemon {
   position: absolute;
@@ -19,6 +19,11 @@
     background-color: sandybrown;
     border-radius: 50px;
     height: 150px;
+  }
+  .movesPokemon{
+    background-color: cadetblue;
+    width: 150px;
+    font-size: 15px;
   }
 }
 

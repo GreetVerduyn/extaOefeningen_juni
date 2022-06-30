@@ -20,5 +20,10 @@
   border-radius: 50px;
   height: 150px;
 }
+.pokemon .movesPokemon {
+  background-color: cadetblue;
+  width: 150px;
+  font-size: 15px;
+}
 
 /*# sourceMappingURL=styles.css.map */
