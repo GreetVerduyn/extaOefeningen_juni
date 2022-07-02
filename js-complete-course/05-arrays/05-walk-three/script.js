@@ -11,6 +11,8 @@
 
 (function() {
 
+
+
     var people = [
         {
             firstname: "Garald",
@@ -39,6 +41,27 @@
         },
     ];
 
-    // your code here
+
+/**/
+    console.log (people);
+    people.forEach(showPerson);
+
+    function showPerson(person){
+        console.log (person.firstname + ' ' + person.lastname);
+    }
+
+    people.forEach(person => {
+        console.log ('test2', person.firstname + ' ' + person.lastname);
+    });
+
+
+
+
+
+
+
+
+
+
 
 })();
