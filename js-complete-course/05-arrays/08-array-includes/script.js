@@ -27,5 +27,5 @@
     ];
 
     // your code here
-
+console.log (fruits.includes('apple'));
 })();
