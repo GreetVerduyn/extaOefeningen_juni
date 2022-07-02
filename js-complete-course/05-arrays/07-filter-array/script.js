@@ -91,4 +91,8 @@
 
     // your code here
 
+    let adults = people.filter(person =>person.age>18)
+    console.log(adults);
+
+
 })();
