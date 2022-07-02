@@ -89,6 +89,29 @@
         },
     ];
 
-    // your code here
+
+
+   /* let initialValue = 0;
+    let objArray = [
+        {x: 1},
+        {x: 2},
+        {x: 3},
+        {x: 4},
+        {x: 5},
+    ]
+    let sum = objArray.reduce(function (total, currentValue) {
+        return total + currentValue.x;
+    }, initialValue);
+
+    console.log(sum);*/
+
+   let initialValue = 0;
+
+   let sum3 = people.reduce(function (total, person) {
+       return total + person.age;
+   }, initialValue);
+
+   console.log('sum3:', sum3);
+
 
 })();
