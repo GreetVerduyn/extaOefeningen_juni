@@ -13,8 +13,9 @@ const searchField = document.getElementById('search');
 async function getData(url){
     const response = await fetch(url)
     let data = await response.json();
+    console.log('data:',data);
     return data;
-//console.log(data)
+
 }
 
 function getMoves(allMoves){
@@ -42,10 +43,16 @@ function searchPokemon() {
         let idPokemon = response.id;
         let imgPokemon = response.sprites.front_default;
         let allMoves = response.moves;
+
+        // let allMoves = response.moves.slice(0,3).map(move => move.move.name);
+
         // console.log(namePokemon);
         // console.log(idPokemon);
         // console.log("img", imgPokemon);
         getMoves(allMoves);
+
+
+
         document.getElementById("namePokemon").innerHTML = namePokemon;
         document.getElementById("idPokemon").innerHTML = ` id ${idPokemon}`;
         document.getElementById("imagePokemon").src = imgPokemon;
