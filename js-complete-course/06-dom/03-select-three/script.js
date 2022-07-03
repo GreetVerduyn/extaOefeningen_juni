@@ -9,8 +9,14 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+
 (function() {
 
-    // your code here
+    // first try
+
+    let paragraphs = document.querySelectorAll("section.material> p");
+    //console.log(paragraphs);
+
+      paragraphs.forEach(paragraph => paragraph.innerHTML= '<p class="owned">owned</p>');
 
 })();
