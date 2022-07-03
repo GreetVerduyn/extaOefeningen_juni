@@ -42,7 +42,15 @@
     ];
 
 
-/**/
+
+//second try
+
+people.forEach((person) => {
+    console.log(person.firstname + '' + person.lastname)
+    })
+
+//first try
+
     console.log (people);
     people.forEach(showPerson);
 

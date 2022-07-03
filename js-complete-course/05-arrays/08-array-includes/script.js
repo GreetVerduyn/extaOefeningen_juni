@@ -26,6 +26,12 @@
         "cherry",
     ];
 
-    // your code here
+    //second try
+
+    console.log(fruits.includes('apple'));
+
+
+
+    // first try
 console.log (fruits.includes('apple'));
 })();

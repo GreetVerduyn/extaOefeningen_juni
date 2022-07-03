@@ -89,7 +89,15 @@
         },
     ];
 
-    // your code here
+
+// second try
+
+    let adults2= people.filter(person=> person.age>18)
+    console.log(adults2);
+
+
+
+    //first try
 
     let adults = people.filter(person =>person.age>18)
     console.log(adults);

@@ -89,8 +89,16 @@
         },
     ];
 
+///second try
+let sum= people.reduce(
+    (sum, person) => sum +  person.age,
+    0);
+console.log ('sum:',sum);
 
 
+
+
+//first try
    /* let initialValue = 0;
     let objArray = [
         {x: 1},
@@ -104,6 +112,7 @@
     }, initialValue);
 
     console.log(sum);*/
+
 
    let initialValue = 0;
 

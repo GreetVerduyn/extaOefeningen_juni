@@ -89,6 +89,26 @@
         },
     ];
 
+
+
+    const JeanDupont= people.findIndex(person=> person.lastname ==='Dupont' && person.firstname ==='Jean');
+    console.log ('JeanDupont:', JeanDupont);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const index= people.findIndex(person => (person.firstname=== 'Jean' && person.lastname === 'Dupont'));
     console.log (index);
     console.log (people[index].email);
