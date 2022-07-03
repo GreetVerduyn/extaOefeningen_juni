@@ -11,6 +11,34 @@
 
 (function() {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // first try
 
    /* let numbers= Array(10).fill().map(() => Math.round(Math.random() * 100))
