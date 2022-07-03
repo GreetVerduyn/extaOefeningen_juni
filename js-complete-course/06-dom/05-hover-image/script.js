@@ -10,7 +10,18 @@
 // You will have time to focus on it later.
 
 (function() {
+    let originalImage= document.querySelector('section.material>figure>img').getAttribute('src');
+    let newImage= document.querySelector('section.material>figure>img').getAttribute('data-hover');
 
-    // your code here
+
+    let toChange=document.querySelector('section.material>figure>img')
+
+
+        toChange.addEventListener("mouseenter", function(event){event.target.src=newImage});
+        toChange.addEventListener("mouseleave", function(event){event.target.src=originalImage});
+
+       // .src=newImage;
+    console.log(toChange);
+
 
 })();
