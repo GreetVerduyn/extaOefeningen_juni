@@ -10,7 +10,25 @@
 // You will have time to focus on it later.
 
 (function() {
+//first try
 
-    // your code here
+
+let object= document.querySelector('#target');
+   console.log(object);
+
+   let element = document.createElement("p");
+   let txt= 'owned';
+
+
+  element.id ='target';
+  element.innerHTML= txt;
+
+   console.log(element)
+
+ object.replaceWith(element)
+
+
+
+
 
 })();
