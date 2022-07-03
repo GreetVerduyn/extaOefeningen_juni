@@ -28,5 +28,31 @@
         "cerise",
     ];
 
-    // your code here
+//first try
+
+
+    let uniqueFruits = [...new Set(fruits)];
+
+    console.log(uniqueFruits);
+
+
+
+
+    let uniqueFruits2 = fruits.filter((fruit, index) => {
+        return fruits.indexOf(fruit) === index;
+    });
+
+    console.log(uniqueFruits2);
+
+
+
+
+  /* for(let i=0; 1<fruits.length; i++){
+         if (fruits.has(fruits[i])) {
+             fruits.delete(fruits[i])}
+     }
+  console.log(fruits
+ )*/
+
+
 })();
