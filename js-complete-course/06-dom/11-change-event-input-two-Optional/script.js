@@ -11,6 +11,32 @@
 
 (function() {
 
-    // your code here
+   let text = document.getElementById('validity');
+   let input = document.getElementById('pass-one');
+
+   /*input.addEventListener("keydown", function(e)) {
+       if (e.code === 'enter') {
+           checkPassword();
+       }
+   };*/
+
+   input.onkeydown=(function(event) {
+       if (event.keyCode == 13) {
+          conslole.log('enter is typed')
+           checkPassword();
+       }
+   });
+
+
+
+
+  function checkPassword(){
+      console.log('Hello')
+        if (text.value.length >=8){
+            text.innerHTML='OK';
+        }
+
+   }
+
 
 })();
