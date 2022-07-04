@@ -11,6 +11,24 @@
 
 (function() {
 
-    // your code here
+    document.getElementById('run').addEventListener("click", checkData);
 
+
+ //console.log(pasW1)
+
+function checkData(){
+    let pasW1= document.getElementById('pass-one').value;
+    let pasW2= document.getElementById('pass-two').value;
+    let border1= document.getElementById('pass-one');
+    let border2= document.getElementById('pass-two');
+    if (pasW1 !== pasW2){
+        border1.style.borderColor='red';
+        border2.style.borderColor='red';
+
+    }
+
+    console.log(pasW1)
+
+    console.log(pasW2)
+}
 })();
