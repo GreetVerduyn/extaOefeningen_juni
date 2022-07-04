@@ -11,6 +11,16 @@
 
 (function() {
 
-    // your code here
+    document.getElementById('run').addEventListener('click', checkPasswords)
 
+    function checkPasswords(){
+        let box1 = document.getElementById('pass-one');
+        let box2 = document.getElementById('pass-two');
+        let passW1 = box1.value;
+        let passW2 = box2.value;
+             if (passW1 !== passW2){
+                box1.classList.add('error');
+                box2.classList.add('error');
+             }
+    }
 })();
