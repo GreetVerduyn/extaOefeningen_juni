@@ -9,24 +9,24 @@
 
 
 <top >
-    <form id="top">
     <label> Pokemon name or id:</label>
-    <input type="text" id="findPokemon" >
-    <input type="submit" value="Submit">
-    </form>
+    <input type="text" id="search">
+    <button onclick="findPokemon()"><i class="search">search</i></button>
 </top>
 
 <main>
-<template>
+
+<template id="Pokemon">
     <div>
-        <div id="name", class="name"> </div>
+        <div id="name" class="name"> </div>
         <div id="image" class="image" src=""> </div>
         <div id="id" class="id"> </div>
+
         <div>
             <div class= "moves move1"></div>
-            <div class= "moves move2"></divclass></div>
+            <div class= "moves move2"></div>
             <div class= "moves move3"></div>
-            <div class= "moves move4"></di>
+            <div class= "moves move4"></div>
         </div>
     </div>
 
@@ -37,7 +37,7 @@
 
 
 
-<script src="scripts.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
 

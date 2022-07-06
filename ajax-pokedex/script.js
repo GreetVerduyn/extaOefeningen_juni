@@ -9,58 +9,38 @@ let basicUrl= 'https://pokeapi.co/api/v2/pokemon/'
 async function getData(url){
     let result= await fetch(url);
     let data = await result.json();
+    //console.log(data)
     return data
 }
 
 
 
+function findPokemon() {
+    let search = document.getElementById("search").value;
+    getData(basicUrl+search)
+        .then(result => {
+            let namePokemon = result.name;
+            let idPokemon = result.id;
+            let img = result.sprites.front_default;
+            let moves = result.moves.slice(0,3);
+            // renderPokemon(namePokemon, idPokemon, img, moves);
+            let evolutionsUrl=result.species.url;
+            return getData(evolutionsUrl)
+        })
+       .then(evolutions=>{
+            let evolutionChain=evolutions.evolution_chain.url;
+            console.log(evolutionChain);
+            return getData(evolutionChain);
 
+        })
+        .then(chain=>{
+            let evolution1=chain.chain.evolves_to[0].species.name;
+            console.log('evolution:', evolution1);
+        })
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*
 
 
 let reference= 'https://pokeapi.co/api/v2/pokemon/';
@@ -123,6 +103,7 @@ function searchPokemon() {
 
 }
 
+*/
 
 
 // function getMoves(moves){
@@ -153,3 +134,4 @@ function searchPokemon() {
 //
 // }
 //
+
