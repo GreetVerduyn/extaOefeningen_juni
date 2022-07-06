@@ -3,6 +3,66 @@
 
 
 
+
+let basicUrl= 'https://pokeapi.co/api/v2/pokemon/'
+
+async function getData(url){
+    let result= await fetch(url);
+    let data = await result.json();
+    return data
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let reference= 'https://pokeapi.co/api/v2/pokemon/';
 let referenceMoves='';
 let moves=[];
