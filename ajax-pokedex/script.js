@@ -4,7 +4,8 @@
 
 
 
-let basicUrl= 'https://pokeapi.co/api/v2/pokemon/'
+let basicUrl= 'https://pokeapi.co/api/v2/pokemon/';
+
 
 async function getData(url){
     let result= await fetch(url);
@@ -13,6 +14,24 @@ async function getData(url){
     return data
 }
 
+function renderPokemon(name, id, img, moves){
+    let template= document.getElementById('template');
+    let target= document.getElementById('target');
+    let item = template.content.cloneNode(true);
+
+    console.log(item);
+
+    item.querySelector('.name').innerHTML=name;
+    item.querySelector('.image').src=img;
+    item.querySelector('.id').innerHTML=id;
+    item.querySelector('.move1').innerHTML=moves[0].move.name;
+    item.querySelector('.move2').innerHTML=moves[1].move.name;
+    item.querySelector('.move3').innerHTML=moves[2].move.name;
+    // item.querySelector('.move4').innerHTML=moves[3].move;
+
+
+    target.appendChild(item)
+}
 
 
 function findPokemon() {
@@ -23,22 +42,23 @@ function findPokemon() {
             let idPokemon = result.id;
             let img = result.sprites.front_default;
             let moves = result.moves.slice(0,3);
-            // renderPokemon(namePokemon, idPokemon, img, moves);
+            renderPokemon(namePokemon, idPokemon, img, moves);
             let evolutionsUrl=result.species.url;
             return getData(evolutionsUrl)
         })
        .then(evolutions=>{
             let evolutionChain=evolutions.evolution_chain.url;
-            console.log(evolutionChain);
+           // console.log(evolutionChain);
             return getData(evolutionChain);
 
         })
         .then(chain=>{
-            let evolution1=chain.chain.evolves_to[0].species.name;
-            console.log('evolution:', evolution1);
+            let evolution=chain.chain.evolves_to[0].species.name;
+           // console.log('evolution:', evolution1);
         })
 
 }
+
 
 /*
 
